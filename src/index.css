@@ -43,26 +43,26 @@ All colors MUST be HSL.
     --calendar-header: 210 20% 98%;
     --calendar-weekend: 210 20% 96%;
     
-    /* Booking colors */
-    --booking-blue: 217 91% 94%;
-    --booking-blue-border: 217 91% 75%;
-    --booking-blue-text: 217 91% 35%;
+    /* Booking status colors */
+    --booking-confirmed: 217 91% 94%;
+    --booking-confirmed-border: 217 91% 60%;
+    --booking-confirmed-text: 217 91% 30%;
     
-    --booking-green: 142 69% 92%;
-    --booking-green-border: 142 69% 58%;
-    --booking-green-text: 142 69% 28%;
+    --booking-pending: 45 93% 90%;
+    --booking-pending-border: 45 93% 50%;
+    --booking-pending-text: 45 93% 25%;
     
-    --booking-orange: 32 95% 92%;
-    --booking-orange-border: 32 95% 55%;
-    --booking-orange-text: 32 95% 30%;
+    --booking-staying: 142 69% 88%;
+    --booking-staying-border: 142 69% 45%;
+    --booking-staying-text: 142 69% 20%;
     
-    --booking-purple: 263 70% 94%;
-    --booking-purple-border: 263 70% 65%;
-    --booking-purple-text: 263 70% 35%;
+    --booking-checkout: 263 70% 92%;
+    --booking-checkout-border: 263 70% 55%;
+    --booking-checkout-text: 263 70% 30%;
     
-    --booking-pink: 330 81% 94%;
-    --booking-pink-border: 330 81% 65%;
-    --booking-pink-text: 330 81% 30%;
+    --booking-maintenance: 0 0% 90%;
+    --booking-maintenance-border: 0 70% 50%;
+    --booking-maintenance-text: 0 0% 30%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
