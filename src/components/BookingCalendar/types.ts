@@ -1,10 +1,28 @@
+export type BookingStatus = 'confirmed' | 'pending' | 'staying' | 'checkout' | 'maintenance';
+
 export interface Booking {
   id: string;
-  title: string;
-  startDate: Date;
-  endDate: Date;
-  color?: 'blue' | 'green' | 'orange' | 'purple' | 'pink';
-  row: number;
+  roomId: string;
+  guestName: string;
+  checkIn: Date;
+  checkOut: Date;
+  status: BookingStatus;
+  guestsCount?: number;
+  phone?: string;
+  notes?: string;
+}
+
+export interface Room {
+  id: string;
+  number: string;
+  categoryId: string;
+  floor?: number;
+}
+
+export interface RoomCategory {
+  id: string;
+  name: string;
+  color?: string;
 }
 
 export interface CalendarDay {
