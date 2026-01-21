@@ -98,28 +98,40 @@ export function BookingCalendar({
 
   return (
     <div className="flex flex-col h-full bg-background rounded-xl border border-calendar-border shadow-calendar overflow-hidden">
-      {/* Navigation Controls */}
-      <div className="flex items-center justify-between px-4 py-3 bg-calendar-header border-b border-calendar-border">
-        <div className="flex items-center gap-3">
-          <CalendarDays className="w-5 h-5 text-primary" />
-          <h2 className="text-lg font-semibold text-foreground">Шахматка</h2>
-          <span className="text-sm text-muted-foreground capitalize">
-            {format(currentStartDate, 'LLLL yyyy', { locale: ru })}
-          </span>
-        </div>
+      {/* Month Navigation - Inline with calendar header */}
+      <div className="flex items-center gap-4 px-4 py-3 bg-calendar-header border-b border-calendar-border">
+        {/* Month selector with navigation */}
         <div className="flex items-center gap-2">
-          <Button variant="outline" size="sm" onClick={scrollToToday}>
-            Сегодня
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            className="h-8 w-8 text-muted-foreground hover:text-foreground" 
+            onClick={goToPrevMonth}
+          >
+            <ChevronLeft className="h-4 w-4" />
           </Button>
-          <div className="flex items-center border rounded-md">
-            <Button variant="ghost" size="icon" className="h-8 w-8" onClick={goToPrevMonth}>
-              <ChevronLeft className="h-4 w-4" />
-            </Button>
-            <Button variant="ghost" size="icon" className="h-8 w-8" onClick={goToNextMonth}>
-              <ChevronRight className="h-4 w-4" />
-            </Button>
+          
+          <div className="flex items-center gap-2 min-w-[160px] justify-center">
+            <CalendarDays className="w-5 h-5 text-primary" />
+            <span className="text-base font-semibold text-foreground capitalize">
+              {format(currentStartDate, 'LLLL yyyy', { locale: ru })}
+            </span>
           </div>
+          
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            className="h-8 w-8 text-muted-foreground hover:text-foreground" 
+            onClick={goToNextMonth}
+          >
+            <ChevronRight className="h-4 w-4" />
+          </Button>
         </div>
+        
+        {/* Today button */}
+        <Button variant="outline" size="sm" onClick={scrollToToday} className="ml-2">
+          Сегодня
+        </Button>
       </div>
       
       {/* Calendar Body */}
